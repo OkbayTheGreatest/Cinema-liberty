@@ -8,16 +8,19 @@
 */
 .table-view .column-header-background {
     -fx-background-color: #651FFF;
-    -fx-background-radius: 14;
-    -fx-background-insets: 0 0 10 0;
+
 }
 
 .table-view .column-header,
 .table-view .filler {
     -fx-size: 50px;
-    -fx-border-width: 0 0 10 0;
+    -fx-border-width: 0 0 2 0;
+    
+    -fx-font-size: 18px;
+    -fx-border-top-left-radius: 5px;
+    -fx-border-top-right-radius: 5px;
     -fx-background-color: transparent;
 }
 .table-view .column-header.label{
-    -fx-text-fill: white
+    -fx-text-fill : white
 }
