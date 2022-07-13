@@ -14,9 +14,9 @@
    <children>
       <TableView fx:id="table" layoutX="36.0" layoutY="177.0" prefHeight="197.0" prefWidth="608.0">
         <columns>
-          <TableColumn fx:id="film" prefWidth="303.0" text="Film" />
-          <TableColumn fx:id="startTime" prefWidth="142.5" text="Start time" />
-            <TableColumn fx:id="endTime" prefWidth="161.5" text="End time" />
+          <TableColumn fx:id="film" prefWidth="303.0" text="FILM" />
+          <TableColumn fx:id="startTime" prefWidth="142.5" text="START TIME" />
+            <TableColumn fx:id="endTime" prefWidth="161.5" text="END TIME" />
         </columns>
       </TableView>
       <Pane layoutX="204.0" layoutY="51.0" prefHeight="5.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />

@@ -7,7 +7,7 @@
 }
 */
 .table-view .column-header-background {
-    -fx-background-color: #651FFF;
+    -fx-background-color: #2E8B57;
 
 }
 
@@ -16,7 +16,7 @@
     -fx-size: 50px;
     -fx-border-width: 0 0 2 0;
     
-    -fx-font-size: 18px;
+    -fx-font-size: 14px;
     -fx-border-top-left-radius: 5px;
     -fx-border-top-right-radius: 5px;
     -fx-background-color: transparent;
