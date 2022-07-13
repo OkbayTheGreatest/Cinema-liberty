@@ -22,11 +22,12 @@ public class FilmTime {
     }
 
     public String getStartTime() {
-        return this.startTime;
+        //return this.startTime;
+         return this.startTime.substring(0, this.startTime.length() - 3);
     }
     
     public String getEndTime() {
-        return this.endTime;
+        return this.endTime.substring(0, this.endTime.length() - 3);
     }
     
     public  Integer getFilmId() {

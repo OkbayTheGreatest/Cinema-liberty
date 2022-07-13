@@ -23,6 +23,8 @@ public class BookingController implements Initializable {
     @FXML
     private Text feedback;
     String userName;
+    @FXML
+    private Text success;
 
     @FXML
     void bookingClick(ActionEvent event) {
@@ -36,6 +38,7 @@ public class BookingController implements Initializable {
 
             }else{
                 feedback.setText("You cannot book a seat twice.");
+                success.setText("");
 
             }
 
@@ -48,14 +51,22 @@ public class BookingController implements Initializable {
     
     public void makeReservation() {
         ConnDB connDB = new ConnDB();
-        System.out.println(userName);
-        System.out.println(filmId);
-        System.out.println(seatId);
+        if(userName.isEmpty()){
+            feedback.setText("Please enter your username.");
+        }else{
+            
+            String feedBack = connDB.makeReservation(userName, filmId, seatId);
+            logInButton.setText("Booked");
+            feedback.setText(feedBack);
+            feedBack.toUpperCase();
+            feedback.setStyle("-fx-background-color: #1a73e8");
+            success.setText("Reservation successsful");
+            feedback.setText("");
+            
+
+        }
 
 
-        String feedBack = connDB.makeReservation(userName, filmId, seatId);
-        logInButton.setText("Booked");
-        feedback.setText(feedBack);
         
 
     }

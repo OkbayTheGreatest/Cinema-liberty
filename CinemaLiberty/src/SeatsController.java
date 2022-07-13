@@ -22,7 +22,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class SeatsController implements Initializable{
+public class SeatsController{
     ConnDB connDB = new ConnDB();
     ArrayList<Integer> availableSeats = new ArrayList<Integer>();
 
@@ -70,6 +70,8 @@ public class SeatsController implements Initializable{
     private TextField userName;
     @FXML
     private Button backButton1;
+    @FXML
+    private Text allSeatsReserved;
 
  
     @FXML
@@ -85,7 +87,7 @@ public class SeatsController implements Initializable{
         int seatId = changeButtonIdToInt(id);
         Button btn = checkSeatButton(seatId);
         if (btn.getText() == "Book"){
-            System.out.println("Booked");
+            alreadyBooked.setText("");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Booking.fxml"));
             Parent root = loader.load();
             Image icon = new Image("logo.png");
@@ -104,7 +106,7 @@ public class SeatsController implements Initializable{
             
         }else{
             alreadyBooked.setText("This seat is already Booked!");
-            System.out.println("cant be booked");
+          
         }
        
         System.out.println(seatId);
@@ -182,9 +184,7 @@ public class SeatsController implements Initializable{
     
     public void dataInIt(FilmTime filmTime) {
         selectedFilm = filmTime;
-        //title.setText(selectedFilm.getFilmname());
         filmID = selectedFilm.getFilmId();
-        System.out.println(filmID);
         showAvailableSeats();
 
 
@@ -193,17 +193,17 @@ public class SeatsController implements Initializable{
     public void showAvailableSeats() {
         List<Seat> seatList = connDB.getAvailableSeats(selectedFilm.filmId);
         availableSeats.clear();
-        
-
+        int countSeats = 0;
         for (Seat availableSeat : seatList) {
-            System.out.println("Seat number. " + availableSeat.seatId + "   Description: " + availableSeat.seatDesc);
-                    Button btn = checkSeatButton(availableSeat.seatId);
-        //if ("-fx-background-color: Red".equals(btn.getStyle())) {
-            btn.setStyle("-fx-background-color: Blue");
+            Button btn = checkSeatButton(availableSeat.seatId);
+ 
+            btn.setStyle("-fx-background-color: #1a73e8");
             btn.setText("Book");
             availableSeats.add(availableSeat.seatId);
-       
-            //btn.setStyle("-fx-background-color: Red");
+            countSeats++;
+        }
+        if(countSeats==0){
+            allSeatsReserved.setText("Sorry, all seats are reserved at this time.");
         }
        
   
@@ -259,19 +259,10 @@ public class SeatsController implements Initializable{
             default :
                break;
         }
-        System.out.println(seatId);
         return  btn;
     
         
     }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
-        //showAvailableSeats();
-        
-    }
-    
 
 
 }

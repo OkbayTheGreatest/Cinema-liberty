@@ -11,23 +11,32 @@
    <children>
       <AnchorPane layoutX="7.0" layoutY="8.0" prefHeight="292.0" prefWidth="328.0" style="-fx-background-color: #353238;">
          <children>
-            <TextField fx:id="username" layoutX="48.0" layoutY="73.0" prefHeight="26.0" prefWidth="215.0" promptText="Username" />
+            <TextField fx:id="username" layoutX="104.0" layoutY="73.0" prefHeight="26.0" prefWidth="155.0" promptText="Username" />
             <Button fx:id="logInButton" layoutX="48.0" layoutY="117.0" mnemonicParsing="false" onAction="#bookingClick" prefHeight="26.0" prefWidth="215.0" style="-fx-background-color: #7775;" text="Book the seat" textAlignment="CENTER" textFill="#ebdfdf">
                <font>
                   <Font size="18.0" />
                </font></Button>
             <Label layoutX="91.0" layoutY="26.0" text="Book A Seat" textFill="WHITE">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Berlin Sans FB Demi Bold" size="24.0" />
                </font>
             </Label>
-            <Text fx:id="feedback" fill="WHITE" layoutX="37.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="225.63671875">
+            <Text fx:id="feedback" fill="#f44336" layoutX="48.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-style: green;" wrappingWidth="215.0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="48.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="56.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="success" fill="GREEN" layoutX="48.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="215.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Text>
          </children>
       </AnchorPane>
    </children>
 </AnchorPane>
-
