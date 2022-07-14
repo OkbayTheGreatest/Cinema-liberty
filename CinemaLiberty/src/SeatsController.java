@@ -106,10 +106,9 @@ public class SeatsController{
             
         }else{
             alreadyBooked.setText("This seat is already Booked!");
+            allSeatsReserved.setText("");
           
         }
-       
-        System.out.println(seatId);
         
     
         

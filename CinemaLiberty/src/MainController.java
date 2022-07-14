@@ -28,5 +28,13 @@ public class MainController {
         stage.show();
     }
     
+    public void starterController(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("StarterPage.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
     
 }

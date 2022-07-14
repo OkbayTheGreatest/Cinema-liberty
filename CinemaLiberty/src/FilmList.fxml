@@ -27,7 +27,7 @@
       </Text>
       <HBox fx:id="titleHbox" alignment="CENTER_LEFT" layoutX="153.0" layoutY="54.0" prefHeight="54.0" prefWidth="343.0">
          <children>
-            <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Programs" textAlignment="CENTER" wrappingWidth="266.23046875">
+            <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcomming Screenings" textAlignment="CENTER" wrappingWidth="266.23046875">
                <font>
                   <Font name="Berlin Sans FB Bold" size="23.0" />
                </font>

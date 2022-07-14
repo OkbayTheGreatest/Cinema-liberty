@@ -2,10 +2,12 @@
 .root{
     -fx-background-image: url("background.jpg");
 }
-#try {
-    -fx-background-image: url("background.jpg");
-}
 */
+.intro {
+    -fx-background-image: url("background.jpg");
+    -fx-background-size: cover;
+}
+
 .table-view .column-header-background {
     -fx-background-color: #2E8B57;
 

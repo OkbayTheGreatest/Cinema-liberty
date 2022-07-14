@@ -12,7 +12,7 @@ public class Cinema extends Application {
     // building the Scene
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FilmList.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("StarterPage.fxml"));
         Parent root = loader.load();
         Image icon = new Image("logo.png");
         primaryStage.getIcons().add(icon);
